@@ -1,27 +1,25 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import Projects from "./pages/About";
 import Contact from "./pages/Contact";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/experience" exact component={Experience} />
-          <Route path="/projects" exact component={Projects} />
-          <Route path="/contact" exact component={Contact} />
+          <Route path="/" element={<Home/>}/>
+          <Route path="/experience" element={<Experience/>} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
-        {/* <Footer /> */}
-      </Router>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
