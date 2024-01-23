@@ -1,5 +1,6 @@
 import Deere from "../assets/John-Deere-Logo.jpg";
 import NTE from "../assets/Northern_Tool_Logo_Tagline_Logo.jpg";
+import ISU from "../assets/iowa-state-universitybanner.jpg"
 
 export const JobList = [
   {
@@ -16,7 +17,7 @@ export const JobList = [
   },
   {
     name: "Iowa State University",
-    image: NTE,
+    image: ISU,
     price: "Helser Hall RA - Resident Assistant",
     link: "/NTE",
   },
