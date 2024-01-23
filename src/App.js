@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import Projects from "./pages/About";
 import Contact from "./pages/Contact";
+import JohnDeere from "./pages/jobpages/JohnDeere";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/experience" element={<Experience/>} />
           <Route path="/projects" element={<Projects/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/JohnDeere" element={<JohnDeere/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

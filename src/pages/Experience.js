@@ -1,14 +1,24 @@
 import React from "react";
-// import { MenuList } from "../helpers/MenuList";
-// import MenuItem from "../components/MenuItem";
+import { JobList } from "../helpers/JobList";
+import MenuItem from "../components/MenuItem";
 import "../styles/Experience.css";
 
 function Experience() {
   return (
-    <div className="experience">
-      <h1 className="menuTitle">Our Menu</h1>
+    <div className="menu">
+      <h1 className="menuTitle"> Industry & Work Experience </h1>
       <div className="menuList">
-        <p> fnjdafknaskdjf </p>
+        {JobList.map((jobItem, key) => {
+          return (
+            <MenuItem
+              key={key}
+              image={jobItem.image}
+              name={jobItem.name}
+              price={jobItem.price}
+              link={jobItem.link}
+            />
+          );
+        })}
       </div>
     </div>
   );
